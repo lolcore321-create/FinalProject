@@ -5,9 +5,7 @@ import com.codeborne.selenide.Selenide;
 
 import java.util.ArrayList;
 
-import static com.codeborne.selenide.Condition.disabled;
 import static com.codeborne.selenide.Condition.enabled;
-import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class HomePage {
@@ -50,9 +48,6 @@ public class HomePage {
         $("[class='I80Um xP4B1']").click();
     }
 
-    public void checkShowSellersButtonDisabled() {
-        $("[data-qaid='search_companies']").shouldBe(disabled);
-    }
 
     public void fillProduct(int index, String name) {
         $$("[data-qaid='multi_search_term'] input").get(index).setValue(name);
